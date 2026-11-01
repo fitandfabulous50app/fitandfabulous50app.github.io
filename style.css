@@ -6,7 +6,10 @@ nav{background:#C44026;text-align:center;padding:10px 8px}nav a{color:#fff;displ
 .badge{display:inline-block;background:#000;color:#fff;border-radius:14px;padding:14px 26px;font-weight:700;font-size:1.05em;margin-top:12px}
 h2{color:#C44026;font-size:1.6em}.features{list-style:none;padding:0;display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:16px}
 .features li{background:#fff;border-left:6px solid #FF8A3D;border-radius:12px;padding:16px;box-shadow:0 2px 8px rgba(196,64,38,.1)}.features b{display:block;color:#C44026}
-.shots{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:16px}.shots img{border-radius:18px;box-shadow:0 4px 14px rgba(0,0,0,.15)}
+.shots{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px 14px}.shots figure{margin:0}.shots figure:last-child{grid-column:1 / -1;justify-self:center;width:calc((100% - 14px) / 2)}
+.shots img{display:block;width:100%;height:auto;aspect-ratio:600/1298;object-fit:contain;object-position:top center;border-radius:22px;box-shadow:0 4px 14px rgba(0,0,0,.15);background:#fff}
+.shots figcaption{text-align:center;font-size:.8em;font-weight:600;line-height:1.3;color:#6b4a3f;margin-top:8px}
+@media(min-width:900px){.shots{grid-template-columns:repeat(5,minmax(0,1fr))}.shots figure:last-child{grid-column:auto;justify-self:stretch;width:auto}}
 .story{background:#fff;border-left:6px solid #FF8A3D;border-radius:12px;padding:4px 20px 8px;box-shadow:0 2px 8px rgba(196,64,38,.1);overflow-wrap:break-word}
 .story .signature{font-style:italic;color:#6b4a3f;margin-top:1.2em}
 .promise{background:#FD605C;color:#fff;border-radius:16px;padding:20px 24px;font-size:1.15em}
