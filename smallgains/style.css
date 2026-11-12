@@ -1,0 +1,56 @@
+/* Small Gains – sunset palette: #FFE198 gold-cream, #FEA762 peach-orange, #E93F2A sunset red, #1C0D20 plum-black.
+   Self-contained: does not touch the Fit & Fabulous 50+ /style.css */
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;font-size:21px;line-height:1.65;color:#1C0D20;background:#FFF8EE;overflow-x:hidden}
+a{color:#A42316;font-weight:600;overflow-wrap:break-word}
+a:hover{color:#7E1A10}
+img{max-width:100%;height:auto}
+.wrap{max-width:860px;margin:0 auto;padding:0 22px}
+h1,h2,header.top .name{font-family:ui-serif,"New York",Georgia,"Times New Roman",serif}
+
+/* Hero: sunset sky, icon as the sun, plum mountains, title on the dark band */
+header.top{text-align:center;background:#1C0D20}
+header.top .sky{position:relative;padding:34px 0 0;background:linear-gradient(180deg,#FFE198 0%,#FFD08A 22%,#FEA762 48%,#F4733F 68%,#E93F2A 86%,#E93F2A 100%)}
+header.top .icon{position:relative;z-index:1;width:108px;height:108px;border-radius:25px;display:block;margin:0 auto 54px;box-shadow:0 0 0 6px rgba(255,225,152,.45),0 0 46px 14px rgba(255,225,152,.75),0 12px 26px rgba(28,13,32,.35)}
+header.top .mountains{display:block;width:100%;height:96px;margin-top:-30px}
+header.top .band{padding:2px 16px 18px}
+header.top .name{font-size:2.4em;font-weight:700;margin:0;line-height:1.1;color:#FFF8EE;text-shadow:0 2px 0 rgba(0,0,0,.35)}
+header.top .tag{font-weight:700;color:#FFE198;margin:.2em 0 .8em;font-size:1.05em}
+
+nav{display:flex;justify-content:center;flex-wrap:wrap;gap:10px}
+nav a{display:inline-block;padding:10px 24px;border-radius:999px;color:#FFE198;font-weight:700;text-decoration:none;background:linear-gradient(180deg,#3A2140,#2A1530);box-shadow:inset 0 1px 0 rgba(255,225,152,.25),0 3px 0 #0C050E,0 6px 12px rgba(0,0,0,.35)}
+nav a:hover{color:#fff}
+nav a[aria-current="page"]{color:#fff;background:linear-gradient(180deg,#FF6A4F,#E93F2A 55%,#C8301E);box-shadow:inset 0 2px 0 rgba(255,255,255,.4),0 3px 0 #8E1F12,0 8px 16px rgba(233,63,42,.45)}
+
+main{padding:34px 0 10px}
+h1{font-size:1.9em;line-height:1.2;margin:.2em 0 .4em;color:#1C0D20}
+h2{font-size:1.35em;color:#1C0D20;margin:1.6em 0 .45em;line-height:1.3;padding-left:16px;border-left:7px solid #E93F2A;border-radius:3px}
+h3{font-size:1.05em;margin:0 0 .3em;line-height:1.35;color:#1C0D20}
+p{margin:.5em 0 .9em}
+ul{padding-left:1.2em}li{margin:.35em 0}
+.lead{font-size:1.05em}
+
+/* raised 3D cards, gold-tinted */
+.card{background:linear-gradient(180deg,#FFF7DD 0%,#FFE9AE 100%);border-radius:20px;padding:18px 22px;margin:16px 0;border:1px solid #F5CF7A;box-shadow:inset 0 2px 0 rgba(255,255,255,.85),0 4px 0 #E3A955,0 10px 22px rgba(160,70,20,.22)}
+.contact{border:2px solid #FEA762}
+.contact .label{font-weight:800;margin:0 0 .4em}
+.btn{display:inline-block;margin:.3em 0;padding:15px 28px;border-radius:999px;background:linear-gradient(180deg,#FF6A4F 0%,#E93F2A 45%,#C8301E 100%);color:#fff !important;font-weight:800;text-decoration:none;text-align:center;line-height:1.3;overflow-wrap:normal;text-shadow:0 1px 1px rgba(110,20,10,.55);box-shadow:inset 0 2px 0 rgba(255,255,255,.45),0 5px 0 #8E1F12,0 12px 20px rgba(233,63,42,.38)}
+.btn:hover{color:#fff}
+.btn:active{transform:translateY(3px);box-shadow:inset 0 2px 0 rgba(255,255,255,.45),0 2px 0 #8E1F12,0 6px 12px rgba(233,63,42,.3)}
+.faq .card p{margin:.2em 0 0}
+.muted{color:#5A3A48}
+
+footer{text-align:center;padding:26px 20px 34px;margin-top:40px;background:#1C0D20;color:#FFE198;font-size:.85em}
+footer a{color:#FEA762}
+
+@media(max-width:600px){
+  body{font-size:20px}
+  header.top .sky{padding-top:24px}
+  header.top .icon{width:92px;height:92px;border-radius:21px;margin-bottom:46px}
+  header.top .mountains{height:72px;margin-top:-24px}
+  header.top .name{font-size:2.05em}
+  h1{font-size:1.65em}
+  .card{padding:16px 18px}
+  nav a{padding:9px 20px}
+}
