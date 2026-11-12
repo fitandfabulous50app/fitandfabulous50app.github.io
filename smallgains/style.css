@@ -1,56 +1,79 @@
-/* Small Gains – sunset palette: #FFE198 gold-cream, #FEA762 peach-orange, #E93F2A sunset red, #1C0D20 plum-black.
+/* Small Gains – "Golden Coin" scheme, matching the app's theme_coin.css and the app icon.
+   Crimson #D51419, deep crimson #B20A18, plum #38052E, gold #EEAF2D, light gold #FDE26E.
    Self-contained: does not touch the Fit & Fabulous 50+ /style.css */
+:root{
+  --crimson-hi:#DE2A24;--crimson:#D51419;--crimson-deep:#B20A18;--crimson-dark:#7D0520;
+  --plum:#38052E;--plum-mid:#530528;
+  --gold:#EEAF2D;--gold-hi:#FDE26E;--gold-rim:#F3C04A;--gold-deep:#B97411;
+  --cream:#FFF8EE;--ivory:#FFF4D6;
+}
 *{box-sizing:border-box}
 html{-webkit-text-size-adjust:100%}
-body{margin:0;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;font-size:21px;line-height:1.65;color:#1C0D20;background:#FFF8EE;overflow-x:hidden}
-a{color:#A42316;font-weight:600;overflow-wrap:break-word}
-a:hover{color:#7E1A10}
+body{margin:0;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;font-size:21px;line-height:1.65;color:var(--plum);background:var(--cream);overflow-x:hidden}
+a{color:var(--crimson-deep);font-weight:600;overflow-wrap:break-word;text-decoration-color:rgba(178,10,24,.45);text-underline-offset:3px}
+a:hover{color:var(--crimson-dark);text-decoration-color:currentColor}
 img{max-width:100%;height:auto}
 .wrap{max-width:860px;margin:0 auto;padding:0 22px}
 h1,h2,header.top .name{font-family:ui-serif,"New York",Georgia,"Times New Roman",serif}
 
-/* Hero: sunset sky, icon as the sun, plum mountains, title on the dark band */
-header.top{text-align:center;background:#1C0D20}
-header.top .sky{position:relative;padding:34px 0 0;background:linear-gradient(180deg,#FFE198 0%,#FFD08A 22%,#FEA762 48%,#F4733F 68%,#E93F2A 86%,#E93F2A 100%)}
-header.top .icon{position:relative;z-index:1;width:108px;height:108px;border-radius:25px;display:block;margin:0 auto 54px;box-shadow:0 0 0 6px rgba(255,225,152,.45),0 0 46px 14px rgba(255,225,152,.75),0 12px 26px rgba(28,13,32,.35)}
-header.top .mountains{display:block;width:100%;height:96px;margin-top:-30px}
-header.top .band{padding:2px 16px 18px}
-header.top .name{font-size:2.4em;font-weight:700;margin:0;line-height:1.1;color:#FFF8EE;text-shadow:0 2px 0 rgba(0,0,0,.35)}
-header.top .tag{font-weight:700;color:#FFE198;margin:.2em 0 .8em;font-size:1.05em}
+/* Hero: the icon's crimson glow fading into plum, with a gold rule beneath */
+header.top{position:relative;text-align:center;color:var(--ivory);
+  background:radial-gradient(ellipse 62% 100% at 50% 14%,#EE3A26 0%,var(--crimson) 17%,var(--crimson-deep) 34%,#960616 46%,var(--crimson-dark) 60%,var(--plum-mid) 80%,var(--plum) 100%)}
+header.top::after{content:"";display:block;height:6px;background:linear-gradient(90deg,var(--gold-deep),var(--gold) 18%,var(--gold-hi) 50%,var(--gold) 82%,var(--gold-deep));box-shadow:0 3px 8px rgba(56,5,46,.25)}
+header.top .sky{padding:40px 0 0}
+header.top .icon{width:112px;height:112px;border-radius:26px;display:block;margin:0 auto 22px;
+  box-shadow:0 0 0 3px var(--gold-rim),0 0 0 7px rgba(253,226,110,.28),0 0 44px 10px rgba(253,226,110,.38),0 14px 28px rgba(30,0,20,.5)}
+header.top .band{padding:2px 16px 26px}
+header.top .name{font-size:2.4em;font-weight:700;margin:0;line-height:1.1;color:var(--ivory);text-shadow:0 2px 0 rgba(40,0,20,.45)}
+header.top .tag{font-weight:700;color:var(--gold-hi);margin:.2em 0 .85em;font-size:1.05em}
 
-nav{display:flex;justify-content:center;flex-wrap:wrap;gap:10px}
-nav a{display:inline-block;padding:10px 24px;border-radius:999px;color:#FFE198;font-weight:700;text-decoration:none;background:linear-gradient(180deg,#3A2140,#2A1530);box-shadow:inset 0 1px 0 rgba(255,225,152,.25),0 3px 0 #0C050E,0 6px 12px rgba(0,0,0,.35)}
+/* Raised glossy pills: plum with gold text, current page in crimson; both with a gold rim */
+nav{display:flex;justify-content:center;flex-wrap:wrap;gap:12px}
+nav a{display:inline-block;padding:10px 26px;border-radius:999px;color:var(--gold-hi);font-weight:700;text-decoration:none;border:2px solid rgba(243,192,74,.75);
+  background:linear-gradient(180deg,#6A1240 0%,var(--plum-mid) 50%,var(--plum) 100%);
+  box-shadow:inset 0 1.5px 0 rgba(253,226,110,.35),0 4px 0 #1E0218,0 8px 14px rgba(20,0,14,.4)}
 nav a:hover{color:#fff}
-nav a[aria-current="page"]{color:#fff;background:linear-gradient(180deg,#FF6A4F,#E93F2A 55%,#C8301E);box-shadow:inset 0 2px 0 rgba(255,255,255,.4),0 3px 0 #8E1F12,0 8px 16px rgba(233,63,42,.45)}
+nav a[aria-current="page"]{color:#fff;border-color:var(--gold-rim);text-shadow:0 1px 1px rgba(70,0,12,.45);
+  background:linear-gradient(180deg,var(--crimson-hi) 0%,var(--crimson) 45%,var(--crimson-deep) 85%,#9C0815 100%);
+  box-shadow:inset 0 1.5px 0 rgba(255,214,200,.75),inset 0 -3px 4px rgba(60,0,12,.28),0 4px 0 #4A0214,0 9px 16px rgba(30,0,10,.45)}
 
-main{padding:34px 0 10px}
-h1{font-size:1.9em;line-height:1.2;margin:.2em 0 .4em;color:#1C0D20}
-h2{font-size:1.35em;color:#1C0D20;margin:1.6em 0 .45em;line-height:1.3;padding-left:16px;border-left:7px solid #E93F2A;border-radius:3px}
-h3{font-size:1.05em;margin:0 0 .3em;line-height:1.35;color:#1C0D20}
+main.wrap{padding-top:46px;padding-bottom:10px}
+h1{font-size:1.9em;line-height:1.2;margin:.2em 0 .4em;color:var(--plum)}
+/* Gold section dividers */
+h2{font-size:1.35em;color:var(--plum);margin:1.5em 0 .45em;line-height:1.3;padding-top:.75em;
+  background:linear-gradient(90deg,var(--gold-deep) 0,var(--gold) 12%,var(--gold-hi) 34%,rgba(253,226,110,0) 78%) top left/100% 3px no-repeat}
+h3{font-size:1.05em;margin:0 0 .3em;line-height:1.35;color:var(--plum)}
 p{margin:.5em 0 .9em}
 ul{padding-left:1.2em}li{margin:.35em 0}
+li::marker{color:var(--crimson)}
 .lead{font-size:1.05em}
+strong{color:var(--plum)}
 
-/* raised 3D cards, gold-tinted */
-.card{background:linear-gradient(180deg,#FFF7DD 0%,#FFE9AE 100%);border-radius:20px;padding:18px 22px;margin:16px 0;border:1px solid #F5CF7A;box-shadow:inset 0 2px 0 rgba(255,255,255,.85),0 4px 0 #E3A955,0 10px 22px rgba(160,70,20,.22)}
-.contact{border:2px solid #FEA762}
-.contact .label{font-weight:800;margin:0 0 .4em}
-.btn{display:inline-block;margin:.3em 0;padding:15px 28px;border-radius:999px;background:linear-gradient(180deg,#FF6A4F 0%,#E93F2A 45%,#C8301E 100%);color:#fff !important;font-weight:800;text-decoration:none;text-align:center;line-height:1.3;overflow-wrap:normal;text-shadow:0 1px 1px rgba(110,20,10,.55);box-shadow:inset 0 2px 0 rgba(255,255,255,.45),0 5px 0 #8E1F12,0 12px 20px rgba(233,63,42,.38)}
+/* Raised 3D cards, warm ivory with a gold rim */
+.card{background:linear-gradient(180deg,#FFFCF4 0%,#FFF1CC 100%);border-radius:20px;padding:18px 22px;margin:16px 0;border:1.5px solid var(--gold-rim);
+  box-shadow:inset 0 2px 0 rgba(255,255,255,.9),0 4px 0 #E0A93A,0 10px 22px rgba(120,40,30,.18)}
+.contact{border:2px solid var(--crimson);box-shadow:inset 0 2px 0 rgba(255,255,255,.9),0 4px 0 var(--crimson-deep),0 10px 22px rgba(120,10,30,.2)}
+.contact .label{font-weight:800;margin:0 0 .4em;color:var(--crimson-deep)}
+/* Primary button: glossy raised crimson with a gold rim, like the app's Done button */
+.btn{display:inline-block;margin:.3em 0;padding:15px 28px;border-radius:999px;border:2px solid var(--gold-rim);
+  background:linear-gradient(180deg,var(--crimson-hi) 0%,var(--crimson) 45%,var(--crimson-deep) 85%,#9C0815 100%);
+  color:#fff !important;font-weight:800;text-decoration:none;text-align:center;line-height:1.3;overflow-wrap:normal;text-shadow:0 1px 1px rgba(70,0,12,.45);
+  box-shadow:inset 0 1.5px 0 rgba(255,214,200,.75),inset 0 -3px 4px rgba(60,0,12,.28),0 6px 0 var(--crimson-dark),0 12px 20px rgba(110,8,30,.32)}
 .btn:hover{color:#fff}
-.btn:active{transform:translateY(3px);box-shadow:inset 0 2px 0 rgba(255,255,255,.45),0 2px 0 #8E1F12,0 6px 12px rgba(233,63,42,.3)}
+.btn:active{transform:translateY(4px);box-shadow:inset 0 1.5px 0 rgba(255,214,200,.75),0 2px 0 var(--crimson-dark),0 6px 12px rgba(110,8,30,.28)}
 .faq .card p{margin:.2em 0 0}
-.muted{color:#5A3A48}
+.muted{color:#6B3A55}
 
-footer{text-align:center;padding:26px 20px 34px;margin-top:40px;background:#1C0D20;color:#FFE198;font-size:.85em}
-footer a{color:#FEA762}
+footer{text-align:center;padding:26px 20px 34px;margin-top:44px;background:var(--plum);color:var(--ivory);font-size:.85em;border-top:5px solid var(--gold)}
+footer a{color:var(--gold-hi)}
+footer a:hover{color:#fff}
 
 @media(max-width:600px){
   body{font-size:20px}
-  header.top .sky{padding-top:24px}
-  header.top .icon{width:92px;height:92px;border-radius:21px;margin-bottom:46px}
-  header.top .mountains{height:72px;margin-top:-24px}
+  header.top .sky{padding-top:30px}
+  header.top .icon{width:96px;height:96px;border-radius:22px;margin-bottom:18px}
   header.top .name{font-size:2.05em}
   h1{font-size:1.65em}
   .card{padding:16px 18px}
-  nav a{padding:9px 20px}
+  nav a{padding:9px 22px}
 }
